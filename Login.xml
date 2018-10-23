@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<!-- Specify the test suite name -->
+<suite name="TestLink Demo" verbose="1" annotations="JDK">
+
+	<!-- Browser Types -->
+	<!-- U_firefox -->
+	<!-- U_chrome -->
+
+	<test name="Demo TestCases" preserve-order="true">
+
+		<parameter name="browser" value="U_chrome" />
+		<parameter name="Environment" value="http://the-internet.herokuapp.com/hovers" /> <!-- Replace your site URL -->
+		<classes>
+			<class name="com.qa.test.DemoTC">
+				<methods>
+					<include name="DemoMethod" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+
+</suite>
